@@ -25,7 +25,7 @@ const giftImages: GiftImage[] = [
   },
   { 
     src: "/images/5.jpg",
-    message: "Sabias que esta foto (Eclipse Over The Mountain) fue tomada por la NASA el 2/09/1999, SI justo el mismo día de tu nacimiento."
+    message: "Sabías que esta foto (Eclipse Over The Mountain) fue tomada por la NASA el 2/09/1999, ¡justo el mismo día de tu nacimiento!"
   },
 ]
 
@@ -59,8 +59,13 @@ export default function Congratulations() {
     </motion.div>
   )
 }
+
 function FlippableImage({ image }: { image: GiftImage }) {
   const [isFlipped, setIsFlipped] = useState(false)
+
+  const handleClick = () => {
+    setIsFlipped(!isFlipped)
+  }
 
   return (
     <motion.div
@@ -68,9 +73,7 @@ function FlippableImage({ image }: { image: GiftImage }) {
       initial={false}
       animate={{ rotateY: isFlipped ? 180 : 0 }}
       transition={{ duration: 0.6 }}
-      onHoverStart={() => setIsFlipped(true)}
-      onHoverEnd={() => setIsFlipped(false)}
-      whileHover={{ scale: 1.05 }}
+      onClick={handleClick}
     >
       <div className="relative w-full h-48 sm:h-40 md:h-48 lg:h-40 xl:h-48">
         <div className={`absolute inset-0 backface-hidden ${isFlipped ? 'hidden' : ''}`}>
@@ -88,4 +91,4 @@ function FlippableImage({ image }: { image: GiftImage }) {
       </div>
     </motion.div>
   )
-}   
+}
