@@ -25,7 +25,7 @@ const giftImages: GiftImage[] = [
   },
   { 
     src: "/images/5.jpg",
-    message: "Sabias que esta foto (Eclipse Over The Mountain) fue tomada por la nasa el 2/09/1999 por la NASA, SI justo el mismo día de tu nacimiento."
+    message: "Sabias que esta foto (Eclipse Over The Mountain) fue tomada por la NASA el 2/09/1999, SI justo el mismo día de tu nacimiento."
   },
 ]
 
