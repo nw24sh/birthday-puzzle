@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { FaBirthdayCake } from 'react-icons/fa'
 import Countdown from '@/components/Countdown'
 
-const birthdayDate = new Date('2024-09-04') // Ajusta esta fecha al cumpleaños real
+const birthdayDate = new Date('2024-09-02') // Ajusta esta fecha al cumpleaños real
 
 export default function HomePage() {
   const [isBirthdayReached, setIsBirthdayReached] = useState(false)
